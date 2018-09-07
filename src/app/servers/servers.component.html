@@ -1,0 +1,21 @@
+<label for="">Server name</label>
+<input type="number"
+class="form-control"
+[(ngModel)]="serverName"
+>
+<p>{{ serverName }}</p>
+<button
+    class="btn btn-success"
+    [disabled]="!allowNewServer"
+    (click)="onCreateServer()">Crete new server</button>
+<!-- <p>{{ serverCreationStatus }}</p> -->
+<p *ngIf="serverCreated; else noServer">Server was created, thank you.</p>
+<ng-template #noServer>
+    No Server was created.
+</ng-template>
+
+<app-server *ngFor="let server of servers"></app-server>
+
+<input type="text" [(ngModel)]="username">
+<p>{{ username }}</p>
+<button [disabled]="!username" (click)="username=''">Clear</button>
