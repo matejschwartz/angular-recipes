@@ -5,11 +5,4 @@ import { Component, Input } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-
-  currentNavItem: string = 'recipes';
-  
-  onNavigate(navItem: string) {
-      this.currentNavItem = navItem;
-  }
-}
+export class AppComponent {}
