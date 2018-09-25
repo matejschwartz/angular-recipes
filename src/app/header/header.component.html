@@ -9,6 +9,15 @@
             <div class="navbar-nav">
                 <a routerLink='/recipes' routerLinkActive="active" class="nav-item nav-link">Recipes</a>
                 <a routerLink="/shopping-list" routerLinkActive="active" class="nav-item nav-link">Shopping List</a>
+                <a class="nav-link nav-item dropdown dropdown-toggle"appDropdown id="navbarDropdown">
+                    Manage
+
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item cursor-pointer" (click)="onSaveData()">Save data</a>
+                        <a class="dropdown-item" (click)="onFetchData()">Fetch data</a>
+                    </div>
+                </a>
+               
             </div>
         </div>
     </div>
